@@ -51,8 +51,12 @@ def pop_line_from_file(filename, idx=None):
 
 def download_file(url, filename):
     '''Faz download de um ficheiro para o nome indicado.'''
-    import urllib
-    urllib.urlretrieve(url, filename)
+    import requests
+    with open(filename, "wb") as file:
+        # get request
+        response = requests.get(url)
+        # write to file
+        file.write(response.content)
 
 
 def get_csv_column_values(csvfile, colname):
