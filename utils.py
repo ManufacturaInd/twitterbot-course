@@ -21,7 +21,7 @@ def post_to_twitter(post_content):
     api = tweepy.API(auth)
     success = False
     while not success:
-        if api.update_status(status=bytes(post_content)):
+        if api.update_status(status=post_content):
             success = True
         else:
             print("vou esperar 5 segundos e tentar de novo")
