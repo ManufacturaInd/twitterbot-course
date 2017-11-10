@@ -1,9 +1,7 @@
+# Tweetbots!
 
-
-* settings.py: twitter and mastodon credentials
-* post.py: make a post
-* utils.py: helper functions
-
+Este é o código que serve de base à introdução aos Twitterbots que fizemos no
+Date With Data de 10 de novembro de 2017.
 
 # Antes de começar
 
@@ -29,15 +27,3 @@ e/ou `POST_TO_TWITTER` para `True`, e correr o script:
 ./post.py
 ```
 
-# TODO
-
-* Testar credenciais do twitter
-* `download_file('https://framacalc.org/9U2ilGfIBr.csv', 'dados.csv')`
-
-CSV Infomed: sacar o excel em <http://app7.infarmed.pt/infomed/pesquisa.php>
-
-    iconv -f ISO-8859-15 -t utf-8 lista_infomed.csv > infomed.csv
-    sed -i 's/^M//' infomed.csv
-    awk -F ";" '{print $2}' infomed.csv | sed 's/"//g' | sort | uniq | grep 'x$' | wc -l
-
-* [Awk em CSV](https://www.joeldare.com/wiki/using_awk_on_csv_files)
