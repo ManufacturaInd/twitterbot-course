@@ -3,6 +3,7 @@
 
 
 def post_to_mastodon(post_content):
+    '''Faz um post no Mastodon. É preciso preencher os valores apropriados no settings.py.'''
     from mastodon import Mastodon
     from settings import MASTODON_CLIENT_ID, MASTODON_ACCESS_TOKEN, MASTODON_BASE_URL
     mastodon = Mastodon(
@@ -14,6 +15,7 @@ def post_to_mastodon(post_content):
 
 
 def post_to_twitter(post_content):
+    '''Faz um post no Twitter. É preciso preencher os valores apropriados no settings.py.'''
     import tweepy
     from settings import TWITTER_CONSUMER_KEY, TWITTER_CONSUMER_SECRET, TWITTER_ACCESS_KEY, TWITTER_ACCESS_SECRET
     auth = tweepy.OAuthHandler(TWITTER_CONSUMER_KEY, TWITTER_CONSUMER_SECRET)
