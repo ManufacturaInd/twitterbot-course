@@ -52,9 +52,12 @@ def pop_line_from_file(filename, idx=None):
 def download_file(url, filename):
     '''Faz download de um ficheiro para o nome indicado.'''
     import requests
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+    }
     with open(filename, "wb") as file:
         # get request
-        response = requests.get(url)
+        response = requests.get(url, headers=headers)
         # write to file
         file.write(response.content)
 

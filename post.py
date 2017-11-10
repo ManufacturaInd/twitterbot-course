@@ -6,10 +6,7 @@ from utils import post_to_mastodon, post_to_twitter, download_file
 POST_TO_MASTODON = False
 POST_TO_TWITTER = False
 
-post_content = ""
-
-download_file('https://framacalc.org/9U2ilGfIBr.csv', 'dados.csv')
-
+post_content = "Hello world!"
 
 print(post_content)
 

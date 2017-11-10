@@ -1,11 +1,10 @@
+# o README.md explica como editar este ficheiro!
 
 TWITTER_CONSUMER_KEY = 'replace with your key'
 TWITTER_CONSUMER_SECRET = 'replace with your secret'
 TWITTER_ACCESS_KEY = 'replace with your access key'
 TWITTER_ACCESS_SECRET = 'replace with your access secret'
 
-# generate the client id and token files by running init_mastodon.py
 MASTODON_CLIENT_ID = "mastodon_credentials.secret"
 MASTODON_ACCESS_TOKEN = "mastodon_login.secret"
 MASTODON_BASE_URL = 'mastodon instance url, e.g. https://x0r.be'
-
