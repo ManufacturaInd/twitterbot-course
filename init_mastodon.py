@@ -1,10 +1,11 @@
+#!/usr/bin/env python3
 from mastodon import Mastodon
 from getpass import getpass
 
-USERNAME = raw_input("Nome de utilizador (Email)? ")
-URL = raw_input("URL do Mastodon? ")
+USERNAME = input("Nome de utilizador (Email)? ")
+URL = input("URL do Mastodon? ")
 PASSWORD = getpass("Palavra-passe? ")
-APPNAME = raw_input("Nome da app? (o nome do bot, tudo minúsculas) ")
+APPNAME = input("Nome da app? (o nome do bot, tudo minúsculas) ")
 # mastodon url?
 
 
