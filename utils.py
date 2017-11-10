@@ -39,6 +39,8 @@ def pop_line_from_file(filename, idx=None):
     f = open(filename, 'r')
     lines = f.readlines()
     f.close()
+    if not lines:
+        return
     if idx or idx == 0:
         line = lines.pop(idx)
     else:
@@ -46,7 +48,7 @@ def pop_line_from_file(filename, idx=None):
     new_file = open(filename, 'w')
     new_file.writelines(lines)
     new_file.close()
-    return line
+    return line.strip()
 
 
 def download_file(url, filename):
@@ -65,4 +67,10 @@ def download_file(url, filename):
 def get_csv_column_values(csvfile, colname):
     '''Devolve uma lista de valores a partir de uma coluna de um ficheiro
     CSV.'''
-    pass
+    import unicodecsv as csv
+    with open(csvfile, 'rb') as f:
+        values = []
+        reader = csv.DictReader(f, delimiter=',')
+        for row in reader:
+            values.append(row[colname])
+    return values
