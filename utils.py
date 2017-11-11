@@ -64,6 +64,7 @@ def download_file(url, filename):
         response = requests.get(url, headers=headers)
         # write to file
         file.write(response.content)
+    return filename
 
 
 def get_csv_column_values(csvfile, colname):
@@ -74,5 +75,6 @@ def get_csv_column_values(csvfile, colname):
         values = []
         reader = csv.DictReader(f, delimiter=',')
         for row in reader:
-            values.append(row[colname])
-    return values
+            if row[colname]:
+                values.append(row[colname])
+    return list(set(values))
