@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 from mastodon import Mastodon
 from getpass import getpass
 
@@ -18,8 +20,8 @@ mastodon = Mastodon(client_id=credfile, api_base_url=URL)
 mastodon.log_in(USERNAME, PASSWORD, to_file=loginfile)
 
 print("Feito! Agora coloca estas linhas no teu settings.py:")
-print
-print('  MASTODON_CLIENT_ID = "%s"' % credfile)
-print('  MASTODON_ACCESS_TOKEN = "%s"' % loginfile)
-print('  MASTODON_BASE_URL = "%s"' % URL)
-print
+print()
+print('MASTODON_CLIENT_ID = "%s"' % credfile)
+print('MASTODON_ACCESS_TOKEN = "%s"' % loginfile)
+print('MASTODON_BASE_URL = "%s"' % URL)
+print()
