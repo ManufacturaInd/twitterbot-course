@@ -7,6 +7,8 @@ Date With Data de 10 de novembro de 2017.
 
 Antes de mais nada, é preciso copiar o ficheiro `settings.py.sample` para `settings.py`.
 
+E atenção que isto são scripts **Python 3**!
+
 ## Ativar Mastodon
 
 1. Correr o `init_mastodon.py`
